@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Jakub Grabowski – Portfolio</title>
+
+    <style>
+        :root {
+            --beige-light: #f7f2e9;
+            --beige: #e8dcc7;
+            --beige-dark: #d2c2a8;
+            --brown: #5a4634;
+            --brown-dark: #3c2f23;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding-top: 80px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--beige-light);
+            color: var(--brown-dark);
+            line-height: 1.7;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--brown);
+            padding: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+        }
+
+        .navbar a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: var(--beige);
+        }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            color: var(--brown-dark);
+        }
+
+        .description {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 20px;
+            background: var(--white);
+            padding: 25px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        /* PROJECTS */
+        .projects {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .project {
+            background: var(--white);
+            margin-bottom: 25px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+        }
+
+        .project-header {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            background: var(--beige);
+            color: var(--brown-dark);
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .project-header:hover {
+            background: var(--beige-dark);
+        }
+
+        .project-content {
+            display: none;
+            padding: 20px 25px;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        .project-content img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        .github-link {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 14px;
+            background: var(--brown);
+            color: var(--white);
+            border-radius: 6px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .github-link:hover {
+            background: var(--brown-dark);
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <a href="#o-mnie">O mnie</a>
+    <a href="#projekty">Projekty</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<header id="o-mnie">
+    <h1>Jakub Grabowski</h1>
+    <p class="description">
+        Jestem studentem 3. roku Informatyki ze specjalizacją Inżynieria i Analiza Danych. Interesuję się projektowaniem rozwiązań opartych na danych, budową pipeline’ów przetwarzania informacji oraz tworzeniem oprogramowania wspierającego procesy analityczne. Programuję w C#, C++, Pythonie i R, wykorzystując te języki zarówno w projektach akademickich, jak i własnych inicjatywach.
+        Pracuję z narzędziami i technologiami związanymi z analizą danych, takimi jak biblioteki numeryczne i statystyczne, podstawowe frameworki do uczenia maszynowego oraz środowiska do przetwarzania danych. Interesuję się również algorytmiką, optymalizacją kodu, projektowaniem struktur danych oraz dobrymi praktykami inżynierii oprogramowania. Chętnie podejmuję się projektów obejmujących automatyzację, integrację danych i tworzenie narzędzi usprawniających pracę.
+    </p>
+</header>
+
+<section class="projects" id="projekty">
+
+    <!-- PROJEKT 1 -->
+    <div class="project">
+        <div class="project-header">Analiza Danych Spotify</div>
+        <div class="project-content">
+            <p>
+                Analiza danych top hitów Spotify (1998–2020) z wykresami i interaktywnymi
+                wizualizacjami pokazującymi popularność artystów, cechy utworów i gatunki muzyczne.
+            </p>
+
+            <div class="section-title"><strong>Technologie</strong></div>
+            <ul>
+                <li>Python</li>
+                <li>Pandas, NumPy</li>
+                <li>Matplotlib, Seaborn, Bokeh</li>
+            </ul>
+
+            <div class="section-title"><strong>Zakres prac</strong></div>
+            <ul>
+                <li>Wczytanie i czyszczenie danych (duplikaty, brakujące wartości)</li>
+                <li>Analiza statystyczna zmiennych numerycznych</li>
+                <li>Wizualizacja danych:
+                    <ul>
+                        <li>wykresy słupkowe</li>
+                        <li>scatterploty</li>
+                        <li>tabele</li>
+                        <li>wykres kołowy</li>
+                        <li>interaktywny wykres Bokeh</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <a class="github-link" href="https://github.com/Kuba464/AnalizaDanych" target="_blank">
+                Link do GitHub
+            </a>
+
+            <img src="spotify1.png" alt="Projekt 1">
+            <img src="spotify2.png" alt="Projekt 1">
+            <img src="spotify3.png" alt="Projekt 1">
+        </div>
+    </div>
+
+    <!-- PROJEKT 2 -->
+    <div class="project">
+        <div class="project-header">Aplikacja do Zarządzania Biblioteką</div>
+        <div class="project-content">
+            <p>
+                Aplikacja desktopowa do zarządzania biblioteką, umożliwiająca obsługę książek,
+                użytkowników oraz recenzji. Projekt oparty na architekturze MVP i bazie danych MySQL.
+            </p>
+
+            <div class="section-title"><strong>Technologie</strong></div>
+            <ul>
+                <li>C#</li>
+                <li>WPF (Windows Presentation Foundation)</li>
+                <li>XAML</li>
+                <li>MySQL</li>
+                <li>Architektura MVP (Model–View–Presenter)</li>
+            </ul>
+
+            <div class="section-title"><strong>Funkcjonalności</strong></div>
+            <ul>
+                <li>Dodawanie, edytowanie i usuwanie książek, autorów oraz wydawnictw</li>
+                <li>Wyszukiwanie książek po tytule i autorze</li>
+                <li>Przeglądanie najpopularniejszych i najnowszych książek</li>
+                <li>Ocenianie książek (system gwiazdek) i pisanie recenzji</li>
+                <li>Zarządzanie statusami czytania:
+                    <ul>
+                        <li>Przeczytana</li>
+                        <li>W trakcie</li>
+                        <li>Chcę przeczytać</li>
+                        <li>Porzucona</li>
+                    </ul>
+                </li>
+                <li>Tworzenie kont użytkowników i logowanie</li>
+                <li>Zmiana danych profilu (np. płci)</li>
+                <li>Panel administratora (zarządzanie użytkownikami, danymi i uprawnieniami)</li>
+            </ul>
+
+            <a class="github-link" href="https://github.com/Asidi120/Projekt_koncowy_AM_WS_JG" target="_blank">
+                Link do GitHub
+            </a>
+
+            <img src="biblikoteka1.png" alt="Projekt 2">
+            <img src="biblioteka2.png" alt="Projekt 2">
+            <img src="biblioteka3.png" alt="Projekt 2">
+        </div>
+    </div>
+
+    <!-- PROJEKT 3 -->
+<div class="project">
+    <div class="project-header">Aplikacja Quiz</div>
+
+    <div class="project-content">
+        <p>
+            Aplikacja składa się z dwóch modułów: generatora quizu oraz modułu rozwiązywania quizu.
+        </p>
+
+        <div class="section-title"><strong>Funkcjonalności</strong></div>
+        <ul>
+            <li><strong>Generator Quizu</strong>
+                <ul>
+                    <li>Tworzenie nowego quizu z nadaną nazwą.</li>
+                    <li>Dodawanie, usuwanie i modyfikacja pytań oraz odpowiedzi.</li>
+                    <li>Zapis quizu do pliku dyskowego w postaci zaszyfrowanej (AES).</li>
+                    <li>Wczytywanie istniejących quizów i ich dalsza edycja.</li>
+                    <li>Przyjazny interfejs chroniący przed błędami użytkownika.</li>
+                </ul>
+            </li>
+
+            <li><strong>Moduł Rozwiązywania Quizu</strong>
+                <ul>
+                    <li>Wczytywanie quizu z pliku dyskowego (deszyfrowanie).</li>
+                    <li>Rozpoczynanie i kończenie quizu za pomocą przycisków <em>Rozpocznij</em> i <em>Zakończ</em>.</li>
+                    <li>Zegar odmierzający czas rozwiązywania quizu.</li>
+                    <li>System punktacji oraz sprawdzania poprawnych odpowiedzi po zakończeniu quizu.</li>
+                    <li>Przyjazny interfejs chroniący przed błędami użytkownika.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="section-title"><strong>Technologie</strong></div>
+        <ul>
+            <li>Język programowania: C#</li>
+            <li>Framework: WPF</li>
+            <li>Architektura: MVVM (Model–View–ViewModel)</li>
+        </ul>
+
+        <a class="github-link" href="https://github.com/weronikaskowron1/ProjektQuiz" target="_blank">
+            Link do GitHub
+        </a>
+
+        <br><br>
+
+        <img src="quiz1.png" alt="Aplikacja Quiz">
+        <img src="quiz2.png" alt="Aplikacja Quiz">
+        <img src="quiz3.png" alt="Aplikacja Quiz">
+    </div>
+</div>
+<div class="project">
+    <div class="project-header">Gra typu Jump</div>
+
+    <div class="project-content">
+        <p>
+            Aplikacja to prosta gra typu jump game, w której gracz steruje postacią poruszającą się po platformach.
+             Celem gry jest dotarcie jak najdalej, zdobywanie punktów oraz reagowanie na dynamicznie zmieniające się elementy otoczenia.
+
+        </p>
+
+        <div class="section-title"><strong>Funkcjonalnoś</strong></div>
+            <ul>
+                <li>Sterowanie postacią (ruch w bok, skok).</li>
+                <li>Generowanie platform i przeszkód w sposób losowy.</li>
+                <li>System punktacji oparty na dystansie</li>
+                <li>Stopniowo rosnący poziom trudności.</li>
+            </ul>
+        <a class="github-link" href="https://github.com/Asidi120/Duck_Jump_Game_AM_JG_WS" target="_blank">
+            Link do GitHub
+        </a>
+
+        <br><br>
+
+        <img src="quiz1.png" alt="Gera typu Jump">
+        <img src="quiz2.png" alt="Gera typu Jump">
+        <img src="quiz3.png" alt="Gera typu Jump">
+    </div>
+</div>
+    
+</div>
+
+</section>
+
+<script>
+    const headers = document.querySelectorAll('.project-header');
+
+    headers.forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            content.style.display =
+                content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
+<section id="kontakt" style="
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 20px;
+    line-height: 1.7;
+">
+
+    <h2 style="text-align:center; color:#3c2f23; font-size:32px; margin-bottom:18px;">
+        Kontakt
+    </h2>
+
+    <div style="text-align:center; font-size:18px;">
+
+        📧 <strong>Email:</strong>  
+        <a href="mailto:kubaaaa347@gmail.com" style="color:#5a4634; text-decoration:none; font-weight:bold;">
+            kubaaaa347@gmail.com
+        </a>
+
+        <br><br>
+
+        📞 <strong>Telefon:</strong>  
+        <a href="tel:+48 795 588 364" style="color:#5a4634; text-decoration:none; font-weight:bold;">
+            +48 123 456 789
+        </a>
+
+        <br><br>
+
+        🐙 <strong>GitHub:</strong>  
+        <a href="https://github.com/Kuba464" target="_blank" style="color:#5a4634; text-decoration:none; font-weight:bold;">
+            github.com/Kuba464
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+
